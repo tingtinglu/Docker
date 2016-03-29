@@ -1,6 +1,6 @@
 # Base image already has cuda + cudnn
 FROM kaixhin/cuda-caffe
-MAINTAINER Henry Lo <henryzlo@cs.umb.edu>
+MAINTAINER Tingting Lu
 
 
 # Install git, python-dev, pip and other dependencies
