@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER jazz14jazz@gmail.com
+MAINTAINER tingtingspring@163.com
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
