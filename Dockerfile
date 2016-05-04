@@ -59,11 +59,11 @@ RUN echo "c.NotebookApp.password = u'sha1:30d3f970641a:ab54d7ab6578d8543778848fe
 # Clone MXNet repo and move into it
 RUN cd /root && git clone --recursive https://github.com/dmlc/mxnet && cd mxnet && \
 # Copy config.mk
-cp make/config.mk config.mk && \
+  cp make/config.mk config.mk && \
 # Set OpenBLAS
-sed -i 's/USE_BLAS = atlas/USE_BLAS = openblas/g' config.mk && \
+  sed -i 's/USE_BLAS = atlas/USE_BLAS = openblas/g' config.mk && \
 # Make 
-make -j"$(nproc)"
+  make -j"$(nproc)"
 
 # Install Python package
 RUN cd /root/mxnet/python && python setup.py install
